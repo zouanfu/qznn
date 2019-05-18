@@ -7,8 +7,11 @@ require("app.network.networkManage")
 require("app.constants.Api")
 require("app.constants.Audio")
 require("app.constants.AnimtionData")
+require("app.constants.CardListData")
+
 require("app.utils.action")
 require("app.utils.AppUtils")
+
 
 local AppBase = require("framework.AppBase")
 local MyApp = class("MyApp", AppBase)
@@ -20,6 +23,8 @@ end
 function MyApp:run()
     cc.FileUtils:getInstance():addSearchPath("res/")
     self:enterScene("LoadingScene")
+    -- self:enterScene("PlayGameScene")
+
 end
 
 return MyApp

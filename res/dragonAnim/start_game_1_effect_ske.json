@@ -1,0 +1,523 @@
+{
+	"frameRate": 24,
+	"name": "start_game_1_effect",
+	"version": "5.5",
+	"compatibleVersion": "5.5",
+	"armature": [{
+		"type": "Armature",
+		"frameRate": 24,
+		"name": "start_game_1_effect",
+		"aabb": {
+			"x": -540.78,
+			"y": -327.4,
+			"width": 1280,
+			"height": 720
+		},
+		"bone": [{
+			"name": "root",
+			"transform": {
+				"x": 26.08,
+				"y": 32.6
+			}
+		}, {
+			"length": 181,
+			"name": "fanyiwenzi",
+			"parent": "root",
+			"transform": {
+				"x": -90.25,
+				"y": 27.9,
+				"skX": -5.1916,
+				"skY": -5.1916
+			}
+		}, {
+			"name": "effect",
+			"parent": "root",
+			"transform": {
+				"x": 134.55,
+				"y": -154.2,
+				"skX": 179.2026,
+				"skY": 179.2026
+			}
+		}, {
+			"length": 1316,
+			"name": "bone",
+			"parent": "root",
+			"transform": {
+				"x": 825.6942,
+				"y": -28.15,
+				"skX": 179.9391,
+				"skY": 179.9391
+			}
+		}],
+		"slot": [{
+			"blendMode": "add",
+			"displayIndex": 11,
+			"name": "gamestart0004",
+			"parent": "effect"
+		}, {
+			"name": "GAMESTART",
+			"parent": "fanyiwenzi"
+		}, {
+			"displayIndex": 2,
+			"name": "就被0001",
+			"parent": "bone"
+		}],
+		"skin": [{
+			"slot": [{
+				"name": "就被0001",
+				"display": [{
+					"name": "就被0001",
+					"transform": {
+						"x": 752.58,
+						"y": -27.35,
+						"skX": -179.94,
+						"skY": -179.94
+					}
+				}, {
+					"name": "就被0007",
+					"transform": {
+						"x": 752.58,
+						"y": -27.35,
+						"skX": -179.94,
+						"skY": -179.94
+					}
+				}, {
+					"name": "就被0006",
+					"transform": {
+						"x": 752.58,
+						"y": -27.35,
+						"skX": -179.94,
+						"skY": -179.94
+					}
+				}, {
+					"name": "就被0005",
+					"transform": {
+						"x": 752.58,
+						"y": -27.35,
+						"skX": -179.94,
+						"skY": -179.94
+					}
+				}, {
+					"name": "就被0004",
+					"transform": {
+						"x": 752.58,
+						"y": -27.35,
+						"skX": -179.94,
+						"skY": -179.94
+					}
+				}, {
+					"name": "就被0003",
+					"transform": {
+						"x": 752.58,
+						"y": -27.35,
+						"skX": -179.94,
+						"skY": -179.94
+					}
+				}, {
+					"name": "就被0002",
+					"transform": {
+						"x": 752.58,
+						"y": -27.35,
+						"skX": -179.94,
+						"skY": -179.94
+					}
+				}]
+			}, {
+				"name": "GAMESTART",
+				"display": [{
+					"name": "GAME START CHN",
+					"transform": {
+						"x": 76.03,
+						"y": -2.41,
+						"skX": 5.19,
+						"skY": 5.19
+					}
+				}]
+			}, {
+				"name": "gamestart0004",
+				"display": [{
+					"name": "gamestart0004",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0025",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0024",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0023",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0022",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0021",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0020",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0019",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0018",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0017",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0016",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0015",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0014",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0013",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0012",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0011",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0010",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0009",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0008",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.22,
+						"skY": -179.22
+					}
+				}, {
+					"name": "gamestart0006",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "gamestart0005",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "就被0007",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "就被0006",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "就被0005",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "就被0004",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "就被0003",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.35,
+						"skY": -179.35
+					}
+				}, {
+					"name": "就被0002",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "就被0001",
+					"transform": {
+						"x": 58.29,
+						"y": -153.4,
+						"skX": -179.2,
+						"skY": -179.2
+					}
+				}, {
+					"name": "GAME START CHN"
+				}]
+			}]
+		}],
+		"animation": [{
+			"duration": 28,
+			"playTimes": 1,
+			"name": "newAnimation",
+			"bone": [{
+				"name": "fanyiwenzi",
+				"translateFrame": [{
+					"duration": 7,
+					"tweenEasing": 0,
+					"y": -25.92
+				}, {
+					"duration": 2,
+					"tweenEasing": 0,
+					"x": -35.4,
+					"y": -99.99
+				}, {
+					"duration": 5,
+					"curve": [0, 0, 0.5, 1],
+					"x": -36.8,
+					"y": -99.99
+				}, {
+					"duration": 14,
+					"x": -11.48,
+					"y": -99.99
+				}],
+				"scaleFrame": [{
+					"duration": 9,
+					"tweenEasing": 0
+				}, {
+					"duration": 5,
+					"curve": [0, 0, 0.5, 1],
+					"x": 1.3,
+					"y": 1.3
+				}, {
+					"duration": 14
+				}]
+			}, {
+				"name": "effect",
+				"translateFrame": [{
+					"duration": 8
+				}, {
+					"duration": 20,
+					"x": -45.38,
+					"y": -226.86
+				}],
+				"scaleFrame": [{
+					"duration": 8
+				}, {
+					"duration": 20,
+					"x": 2,
+					"y": 2
+				}]
+			}, {
+				"name": "bone",
+				"translateFrame": [{
+					"duration": 28,
+					"x": 5.63
+				}]
+			}],
+			"slot": [{
+				"name": "GAMESTART",
+				"displayFrame": [{
+					"duration": 7,
+					"value": -1
+				}, {
+					"duration": 21
+				}]
+			}, {
+				"name": "gamestart0004",
+				"displayFrame": [{
+					"value": 27
+				}, {
+					"value": 26
+				}, {
+					"value": 25
+				}, {
+					"value": 24
+				}, {
+					"value": 23
+				}, {
+					"duration": 2,
+					"value": 22
+				}, {
+					"value": 21
+				}, {}, {
+					"value": 20
+				}, {
+					"value": 19
+				}, {
+					"value": 18
+				}, {
+					"value": 17
+				}, {
+					"value": 16
+				}, {
+					"value": 15
+				}, {
+					"value": 14
+				}, {
+					"value": 13
+				}, {
+					"value": 12
+				}, {
+					"value": 11
+				}, {
+					"value": 10
+				}, {
+					"value": 9
+				}, {
+					"value": 8
+				}, {
+					"value": 7
+				}, {
+					"value": 6
+				}, {
+					"value": 5
+				}, {
+					"value": 4
+				}, {
+					"value": 3
+				}, {
+					"value": 2
+				}, {
+					"duration": 0,
+					"value": 1
+				}]
+			}, {
+				"name": "就被0001",
+				"displayFrame": [{}, {
+					"value": 6
+				}, {
+					"value": 5
+				}, {
+					"value": 4
+				}, {
+					"value": 3
+				}, {
+					"value": 2
+				}, {
+					"value": 1
+				}, {
+					"duration": 21,
+					"value": -1
+				}]
+			}],
+			"zOrder": {
+				"frame": [{
+					"duration": 28,
+					"zOrder": [0, 2]
+				}]
+			}
+		}],
+		"defaultActions": [{
+			"gotoAndPlay": "newAnimation"
+		}]
+	}]
+}

@@ -13,7 +13,20 @@ function PlayGameScene:onEnter()
     self.ui = global:loadCsbFile(self, 'res/play/PlayScene.csb')
     self:initView()
     self:serviceCardView()
-  
+    -- self:pushCardAnim() 
+
+    local sprite1 = display.newSprite('res/card/card_effect_fanpai5_0.png')
+    sprite1:setScale(0.8)
+    sprite1:center()
+    sprite1:addTo(self):center()
+
+    local rae=cc.JumpBy:create(0.5, cc.p(100, 100), 300, 1)
+    sprite1:runAction(rae)
+
+    local rae=cc.Blink:create(2, 5)
+    sprite1:runAction(rae)
+
+
 end
 
 function PlayGameScene:initView()
@@ -251,7 +264,6 @@ function PlayGameScene:playAnimationTwo(position)
             end,
             0.6
         )
-        -- self:playAnimationTwoUser(position)
         return
     end
     if position == 10 then
@@ -306,7 +318,7 @@ function PlayGameScene:playAnimationTwoUser(position)
                         cc.MoveTo:create(
                         0.5,
                         cc.p(
-                            (cardViewZero:getPositionX() + contentSize.width*0.4 * (i - 1) - xInd),
+                            (cardViewZero:getPositionX() + contentSize.width * 0.4 * (i - 1) - xInd),
                             cardView:getPositionY()
                         )
                     )

@@ -159,6 +159,7 @@ end
 
 -- 设置点击事件
 function setOnClickListener(view, callBackFunc)
+    print('view===',view)
     view:addTouchEventListener(
         function(callback, event)
             -- 抬起或去取消的时候才回调点击

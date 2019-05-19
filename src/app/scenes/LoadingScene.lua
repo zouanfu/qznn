@@ -65,8 +65,8 @@ function LoadingScene:onEnter()
                     if self.timer ~= nil then
                         self:stopAction(self.timer)
                     end
-                    -- global:goMainScene()
-                    global:goPlayGameScene()
+                    global:goMainScene()
+                    -- global:goPlayGameScene()
                 end
             else
                 self.value = self.value + math.random(0, 5)

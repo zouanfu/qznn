@@ -9,24 +9,117 @@ local PlayGameScene =
 function PlayGameScene:ctor()
 end
 
+-- function PlayGameScene:runFlipAnim(sBack, sFront, duration, cb)
+--     sBack.setPosition(sFront.getPosition())
+--     sFront.getParent().addChild(sBack, sFront.getLocalZOrder() + 1)
+
+--     sBack.show()
+--     sFront.hide()
+
+--     sBack.runAction(cc.sequence(
+--         cc.show(),
+--         cc.orbitCamera(duration / 2, 1, 0, 0, -90, 0, 0),
+--         cc.hide(),
+--         cc.callFunc(function () {
+--             sFront.runAction(cc.sequence(
+--                 cc.show(),
+--                 cc.orbitCamera(duration / 2, 1, 0, 90, -90, 0, 0),
+--                 cc.callFunc(function () {
+--                     cb && cb()
+--                 })
+--             ))
+--         })
+--     ))
+-- end
+
 function PlayGameScene:onEnter()
     self.ui = global:loadCsbFile(self, 'res/play/PlayScene.csb')
     self:initView()
     self:serviceCardView()
-    -- self:pushCardAnim() 
+    -- self:pushCardAnim()
+  
+    -- //正面
+    local sprite2 = display.newSprite('res/card/mpnn_effect_13.png')
+    sprite2:setScale(0.5)
+    sprite2:center()
+    sprite2:addTo(self):center()
+    sprite2:setVisible(false)
+    -- local rae2 = cc.RotateBy:create(1, cc.vec3(0, -90, 0))
+    -- sprite2:runAction(rae2)
 
+    -- //反面
     local sprite1 = display.newSprite('res/card/card_effect_fanpai5_0.png')
-    sprite1:setScale(0.8)
+    sprite1:setScale(1.7)
     sprite1:center()
     sprite1:addTo(self):center()
 
-    local rae=cc.JumpBy:create(0.5, cc.p(100, 100), 300, 1)
-    sprite1:runAction(rae)
+    print('sprite2', sprite2)
+    -- 弹性动画
+    -- cc.EaseElasticIn:create(action, period)
+    local action2=  cc.EaseElasticInOut:create(cc.MoveTo:create(1, cc.p(200, 200)), 0.9)
+    sprite1:runAction(action2)
 
-    local rae=cc.Blink:create(2, 5)
-    sprite1:runAction(rae)
+    setScaleListener(
+        self.Button_1,
+        function()
+            print('点击事件')
+            sprite2:setVisible(false)
+            local anim1 = cc.OrbitCamera:create(0.5, 1, 0, 0, 90, 0, 0)
 
+            local rae = cc.RotateBy:create(2, cc.vec3(0, 90, 0))
+            sprite1:runAction(anim1)
 
+            local rae2 = cc.RotateBy:create(2, cc.vec3(0, 90, 0))
+            -- sprite2:runAction(rae2)
+
+            self:performWithDelay(
+                function()
+                    sprite2:setVisible(true)
+                    print('第一次播放完成')
+                    local anim1 = cc.OrbitCamera:create(0.5, 1, 0, 90, -90, 0, 0)
+                    local rae2 = cc.RotateBy:create(1, cc.vec3(0, 90, 0))
+                    sprite2:runAction(anim1)
+                end,
+                0.5
+            )
+        end
+    )
+
+    -- setScaleListener(
+    --     self.Panel_10,
+    --     function()
+    --         local rae = cc.RotateBy:create(1, cc.vec3(0, -90, 0))
+    --         sprite2:runAction(rae)
+
+    --         local rae2 = cc.RotateBy:create(1, cc.vec3(0, -90, 0))
+    --         sprite1:runAction(rae2)
+
+    --         -- self:performWithDelay(
+    --         --     function()
+    --         --         local rae2 = cc.RotateBy:create(1, cc.vec3(0, -90, 0))
+    --         --         sprite2:runAction(rae2)
+    --         --     end,
+    --         --     1
+    --         -- )
+    --     end
+    -- )
+
+    --  local rae=cc.JumpBy:create(0.5, cc.p(100, 100), 300, 1)
+    -- sprite1:runAction(rae)
+    -- sprite2:addTouchEventListener(function(callback,event)
+    --         print('event',event)
+
+    -- end
+    -- )
+
+    --     setOnClickListener(sprite2, function()
+
+    -- end)
+    -- local rae=cc.JumpBy:create(0.5, cc.p(100, 100), 300, 1)
+    -- sprite1:runAction(rae)
+
+    -- local rae=cc.Blink:create(2, 5)
+    -- sprite1:runAction(rae)
 end
 
 function PlayGameScene:initView()
@@ -58,29 +151,30 @@ function PlayGameScene:initView()
     local cardPosition4Y = Panel_2:getPositionY()
     locationList[2] = {x = cardPosition4X, y = cardPosition4Y}
 
-    local Button_1 = Panel_1:getChildByName('Button_1')
+    self.Button_1 = Panel_1:getChildByName('Button_1')
     self.Panel_9 = Panel_1:getChildByName('Panel_9')
-    local Panel_10 = self.Panel_9:getChildByName('Panel_10')
 
-    local Image_16 = Panel_10:getChildByName('Image_16')
-    local Text_23 = Panel_10:getChildByName('Text_23')
-    local Text_24 = Panel_10:getChildByName('Text_24')
-    local Text_26 = Panel_10:getChildByName('Text_26')
+    self.Panel_10 = self.Panel_9:getChildByName('Panel_10')
+
+    local Image_16 = self.Panel_10:getChildByName('Image_16')
+    local Text_23 = self.Panel_10:getChildByName('Text_23')
+    local Text_24 = self.Panel_10:getChildByName('Text_24')
+    local Text_26 = self.Panel_10:getChildByName('Text_26')
 
     self.PanelUser1:setVisible(false)
     self.PanelUser2:setVisible(false)
     self.PanelUser3:setVisible(false)
     self.PanelUser4:setVisible(false)
 
-    setScaleListener(
-        Button_1,
-        function()
-            global:goMainScene()
-        end
-    )
+    -- setScaleListener(
+    --     self.Button_1,
+    --     function()
+    --         global:goMainScene()
+    --     end
+    -- )
 
     setScaleListener(
-        Panel_10,
+        self.Panel_10,
         function()
             if not Text_26:isVisible() then
                 Text_23:setVisible(false)
